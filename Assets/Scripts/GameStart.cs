@@ -8,16 +8,19 @@ public class GameStart : MonoBehaviour {
 	public float timer;
 	public static bool isStarted;
 	public GameObject logo;
+	public GameObject hudGraphics;
 	void Start () {
 		isStarted = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.Space)){
+
+		if (Input.GetKey(KeyCode.Space) && !isStarted) {
+			Destroy (logo);
+			Instantiate(hudGraphics, new Vector3 (-10, -8, 0), Quaternion.identity);
 			isStarted = true;
 			
-			Destroy (logo);
 		}
 		
 	}
