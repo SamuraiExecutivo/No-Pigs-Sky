@@ -62,8 +62,8 @@ public class Player : MonoBehaviour {
 	void FixedUpdate () {
 
 		if (fuel > 1 && GameStart.isStarted) {
-			vert = Input.GetAxisRaw("Vertical");
-			hori = Input.GetAxisRaw("Horizontal");
+			vert = Input.GetAxis("Vertical");
+			hori = Input.GetAxis("Horizontal");
 			rb.velocity = new Vector2(hori * speed, vert * speed);
 			FuelConsumption();
 		}
