@@ -20,7 +20,6 @@ public class AudioController : MonoBehaviour {
 		musica = GetComponent<AudioSource> ();
 		musica.clip = full;
 		musica.Play();
-		Debug.Log ("Musica tocou");
 
 	}
 	
